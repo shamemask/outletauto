@@ -352,6 +352,7 @@
     font-weight: bold;
 }
 
+
 .registration,
 .recovery {
     .title {
@@ -529,6 +530,7 @@
     display: none;
 }
 
+
 .mobile-bottom-nav {
     z-index: 2;
     display: none;
@@ -651,10 +653,7 @@
     }
 }
 
-.silver-bg {
-    background-color: #1b1919;
-    min-height: 100vh;
-}
+
 
 .title {
     font-size: 24px;
@@ -727,6 +726,18 @@
         }
     }
 }
+
+
+.favorite,
+.basket,
+.recovery,
+.news,
+.registration,
+.profile {
+    .content-wrapper {
+        padding-top: 32px;
+//         min-height: calc(100vh - 317px);
+    }
 
 .paragraph {
     margin-top: 20px;
@@ -3579,6 +3590,7 @@
     font-weight: 700;
 }
 
+
 .add-auto {
 
     .input-silver {
@@ -3688,6 +3700,7 @@
         }
     }
 }
+
 
 label,
 span,
@@ -4036,6 +4049,13 @@ a {
     background-position: center center;
     background-size: cover;
 
+
+    .title-news {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px
+    }
     .drop-down-wrapper {
 
         &:first-child {
@@ -4079,6 +4099,7 @@ a {
             padding-bottom: 0px !important;
             max-height: 0px;
         }
+
     }
 
     .arrow-fixed-wrapper {
