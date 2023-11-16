@@ -3,32 +3,12 @@
 {% load socialaccount %}
 
 {% block content %}
-
-        <div class="content-wrapper">
+        <div class="content-wrapper call-to-vin">
             <div class="container">
                 <div class="content">
                     <div class="main-content">
                         <h2 class="title">Движение заказов</h2>
                         <div class="main-wrapper">
-                            <div class="mobile-filter">
-                                <ol class="drop-down-wrapper">
-                                    <input type="text" class="drop-down-value">
-                                    <span class="drop-down-title red-btn">
-                                        Фильтр
-                                    </span>
-                                    <ul class="drop-down-list">
-                                        <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
-                                                популярные</a></li>
-                                        <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
-                                                дешевле</a></li>
-                                        <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
-                                                дороже</a></li>
-                                        <li class="drop-down-li"><a class="drop-down-item" href="#">По
-                                                рейтингу</a>
-                                        </li>
-                                    </ul>
-                                </ol>
-                            </div>
                             <form action="#" method="#" class="interface">
                                 <div class="auto">
                                     <ol class="drop-down-wrapper">
@@ -85,7 +65,7 @@
                                         <span class="pre-text"><span>Дата с</span></span>
                                         <div class="calendar">
                                             <input type="hidden" name="" id="">
-                                            <span class="calendar-num">17.09.2021</span>
+                                            <span>17.09.2021</span>
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -97,7 +77,7 @@
                                     <div class="data-end">
                                         <div class="next-text">по</div>
                                         <div class="calendar">
-                                            <span class="calendar-num">17.09.2022</span>
+                                            <span>17.09.2022</span>
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -118,4 +98,5 @@
                 </div>
             </div>
         </div>
+    <script src="{% static 'outletauto/assets/js/popup-callToVin.js' %}"></script>
 {% endblock %}
