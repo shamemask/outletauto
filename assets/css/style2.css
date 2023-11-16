@@ -190,7 +190,7 @@ header {
       width: 10%; }
     header .header-row-2 a {
       position: relative; }
-      header .header-row-2 a::after {
+      header .header-row-2 a:not(.red-btn)::after {
         content: "";
         display: block;
         position: absolute;
