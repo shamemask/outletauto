@@ -109,5 +109,10 @@ min-height: 578px;
       font-weight: bold; }
       .modal-content button[type="submit"]:hover {
         background-color: black; }
-
+a.center{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
 /*# sourceMappingURL=style.css.map */

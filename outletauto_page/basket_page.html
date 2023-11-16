@@ -16,7 +16,7 @@
                             <div>
                                 <h2>Позиции для оформления заказа отсутствуют</h2>
                                 <p>Сложите в корзину нужный товар</p>
-                                <button class="red-btn">В каталог</button>
+                                <a href="{% url 'catalog_page' %}" class="red-btn center">В каталог</a>
                             </div>
                         </div>
                         <div class="not-empty">
@@ -144,7 +144,7 @@
                             </div>
                             <div class="product-interface">
                                 <div class="product-info">
-                                    <input type="button" value="Перейти к оформлению" class="red-btn">
+                                    <a href="{% url 'payment_page' %}" class="red-btn center">Перейти к оформлению</a>
                                     <div class="total">
                                         <span class="title-info"><span class="bold">Всего</span> : 3 товара</span>
                                         <span class="total-price bold">8 115руб</span>
@@ -165,8 +165,6 @@
                 </div>
             </div>
         </div>
-    <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
-    <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/select-all.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/retention.js' %}"></script>

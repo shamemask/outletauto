@@ -2276,3 +2276,10 @@ a {
     padding-bottom: 20px;
     max-height: 100vh;
 }
+
+a.center{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
