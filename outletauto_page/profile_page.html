@@ -21,19 +21,21 @@
                             <div class="workspace-list">
                                 <div class="workspace tab tab-active">
                                     {% for k,v in profile_dict.items %}
+                                    {% with value=v.0 k_ru=v.1 %}
                                     <form action="#">
                                         <div class="contact-data form-row">
-                                            <label for="contact">{{k}}</label>
-                                            <input class="input-silver" type="text" placeholder="{{v}}"
-                                                name="{{k}}" id="contact">
-                                            <input type="button" value="Изменить" class="red-btn">
+                                            <label for="contact">{{k_ru}}</label>
+                                            <input class="input-silver" type="text" placeholder="{{value}}"
+                                                name="{{k_en}}" id="contact" disabled>
+                                            <button type="submit" class="red-btn" >Изменить</button>
                                         </div>
                                     </form>
+                                    {% endwith %}
                                     {% endfor %}
 
                                     <form action="#">
                                         <div class="password-wrapper form-row">
-                                            <input type="button" value="Удалить аккаунт" class="transparent-btn">
+                                            <a class="transparent-btn center">Удалить аккаунт</a>
                                         </div>
                                     </form>
                                 </div>
