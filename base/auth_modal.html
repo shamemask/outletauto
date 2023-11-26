@@ -26,8 +26,8 @@
                         </div>
                         <button class="red-btn">Войти</button>
                         <div class="check-with-label-wrapper">
-                            <input type="checkbox" class="check-with-label" id="remember" />
-                            <label class="label-for-check" for="remember">Запомнить</label>
+                            {{ logform.remember_me }}
+                            <label class="label-for-check" for="remember">{{ logform.remember_me.label}}</label>
                         </div>
                         <div class="auth-links">
                             <a id="RegBtn">Регистрация</a>
