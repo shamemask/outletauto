@@ -7,7 +7,7 @@
         <header>
             <div class="container">
                 <div class="logotype">
-                    <a href="{% url_for(index)">
+                    <a href="{% url 'index' %}">
                         <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype">
                     </a>
                 </div>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="auth-links">
                             <a id="RegBtn">Регистрация</a>
-                            <p href="#">Восстановить пароль</p>
+                            <a href="{% url 'recovery_page' %}">Восстановить пароль</a>
                         </div>
                     </form>
                 </div>
