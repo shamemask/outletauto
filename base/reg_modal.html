@@ -36,6 +36,11 @@
                                 <div>
                                     {{ fizform.phone }}
                                     {{ fizform.email }}
+                                    {% if fizform.email.errors %}
+                                        <div class="error-message">
+                                          {{ fizform.email.errors }}
+                                        </div>
+                                    {% endif %}
                                     {{ fizform.promo_code }}
                                 </div>
                             </div>

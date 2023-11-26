@@ -32,10 +32,20 @@
                                         {{ fizform.password }}
                                         {{ fizform.password2 }}
                                     </div>
+                                    {% if fizform.password.errors %}
+                                        <div class="error-message">
+                                          {{ fizform.password.errors }}
+                                        </div>
+                                    {% endif %}
                                 </div>
                                 <div>
                                     {{ fizform.phone }}
                                     {{ fizform.email }}
+                                    {% if fizform.email.errors %}
+                                        <div class="error-message">
+                                          {{ fizform.email.errors }}
+                                        </div>
+                                    {% endif %}
                                     {{ fizform.promo_code }}
                                 </div>
                             </div>
@@ -66,11 +76,21 @@
                                     {{ urform.shop }}
                                     {{ urform.phone }}
                                     {{ urform.email }}
+                                    {% if urform.email.errors %}
+                                        <div class="error-message">
+                                          {{ urform.email.errors }}
+                                        </div>
+                                    {% endif %}
                                     {{ urform.full_name }}
                                     <div class="row-2">
                                         {{ urform.password }}
                                         {{ urform.password2 }}
                                     </div>
+                                    {% if urform.password.errors %}
+                                        <div class="error-message">
+                                          {{ urform.password.errors }}
+                                        </div>
+                                    {% endif %}
                                     <p class="warning">Для обеспечения информационной безопаности не указывайте
                                         пароли,
                                         которые используете
