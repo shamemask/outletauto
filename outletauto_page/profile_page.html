@@ -27,7 +27,13 @@
                                             <label for="contact">{{k_ru}}</label>
                                             <input class="input-silver" type="text" placeholder="{{value}}"
                                                 name="{{k_en}}" id="contact" disabled>
+                                            {% if k_ru == 'Адрес электронной почты' %}
+
+                                            {% elif k_ru == 'Баланс' %}
+                                            <button type="submit" class="red-btn" >Пополнить</button>
+                                            {% else %}
                                             <button type="submit" class="red-btn" >Изменить</button>
+                                            {% endif %}
                                         </div>
                                     </form>
                                     {% endwith %}
