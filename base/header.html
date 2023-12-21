@@ -38,11 +38,11 @@
                         <li><a href="{% url 'news_page' %}">Новости</a></li>
                     </ul>
                     <ul class="header-account">
+                        {% if request.path != '/authorization' and request.path != '/registration' %}
                         <li>
-
                             <a id="LogBtn">Войти</a>
-
                         </li>
+                        {% endif %}
                     </ul>
 
                 </div>
@@ -68,13 +68,12 @@
                     </ul>
                     <ul class="header-account">
                         <li><a href="{% url 'profile_page' %}">{{ user.email }}</a></li>
+                        {% if request.path != '/authorization' and request.path != '/registration' %}
                         <li>
-
                             {% csrf_token %}
-
                             <a href="{% url 'logout' %}" class="logout-link">Выйти</a>
-
                         </li>
+                        {% endif %}
                         <li><a href="{% url 'promotion_page' %}" class="red-btn center">Акция</a></li>
                     </ul>
                 </div>
@@ -98,10 +97,11 @@
             {% if not user.is_authenticated %}
                 <div class="header-row-2 auth-off">
                     <ul class="header-account">
+                        {% if request.path != '/authorization' and request.path != '/registration' %}
                         <li>
                             <a href="{% url 'authorization_page' %}">Войти</a>
-
                         </li>
+                        {% endif %}
                     </ul>
                     <ul class="header-contact">
                         <li><a href="https://yandex.ru/maps/-/CDebNM~u">Адрес магазина</a></li>
@@ -111,12 +111,12 @@
             {% else %}
                 <div class="header-row-2 auth-on">
                     <ul class="header-account">
+                        {% if request.path != '/authorization' and request.path != '/registration' %}
                         <li><a href="{% url 'profile_page' %}">{{ user.email }}</a></li>
                         <li>
-
                             <a href="{% url 'logout' %}" class="logout-link">Выйти</a>
-
                         </li>
+                        {% endif %}
                     </ul>
                     <ul class="header-contact">
                         <li><a href="https://yandex.ru/maps/-/CDqgzWZO">Адрес магазина</a></li>
