@@ -10,6 +10,9 @@
                     <div class="tab-wrapper">
                         <div class="tab-interface">
                             <div class="nav">
+                                {% for eng, ru in all_catalog_names.items %}
+                                    <a href="{% url 'universal_catalog_page' %}?catalog={{eng}}" class="tab-btn btn-active">{{ru}}</a>
+                                {% endfor %}
                                 <a href="#" class="tab-btn btn-active" data-tab=1>Масла и технические жидкости</a>
                                 <a href="#" class="tab-btn" data-tab=2>Шины и диски</a>
                                 <a href="#" class="tab-btn" data-tab=3>Автохимия и косметика</a>
@@ -1019,8 +1022,8 @@
                                 <div class="pagination">
                                     <span class="step-links">
                                         {% if catalog_items.has_previous %}
-                                            <a href="?page=1">&laquo; Первая</a>
-                                            <a href="?page={{ catalog_items.previous_page_number }}">Предыдущая</a>
+                                            <a href="?catalog={{catalog}}&page=1">&laquo; Первая</a>
+                                            <a href="?catalog={{catalog}}&page={{ catalog_items.previous_page_number }}">Предыдущая</a>
                                         {% endif %}
 
                                         <span class="current">
@@ -1028,8 +1031,8 @@
                                         </span>
 
                                         {% if catalog_items.has_next %}
-                                            <a href="?page={{ catalog_items.next_page_number }}">Следующая</a>
-                                            <a href="?page={{ catalog_items.paginator.num_pages }}">Последняя &raquo;</a>
+                                            <a href="?catalog={{catalog}}&page={{ catalog_items.next_page_number }}">Следующая</a>
+                                            <a href="?catalog={{catalog}}&page={{ catalog_items.paginator.num_pages }}">Последняя &raquo;</a>
                                         {% endif %}
                                     </span>
                                 </div>
