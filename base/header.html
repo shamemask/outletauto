@@ -1,0 +1,131 @@
+{% load static %}
+{% load socialaccount %}
+
+
+<header>
+    <div class="container">
+        <div class="pc-header">
+            <div class="header-row-1">
+                <div class="logotype-wrapper header-logotype">
+                    <a href="{% url 'index' %}">
+                        <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype"
+                            class="logotype">
+                    </a>
+                </div>
+                <form class="header-search search" action="#">
+                    <input type="text" class="search-input" placeholder="Поиск по артикулу или VIN коду">
+                    <a class="search-btn red-btn" href="{% url 'catalog_page' %}">Найти</a>
+                </form>
+                <ul class="header-contact">
+                    <li><a href="https://yandex.ru/maps/-/CDebNM~u">Адрес магазина</a></li>
+                    <li><a href="tel:+7 (918) 570-05-31">+7 (918) 570-05-31</a></li>
+                </ul>
+            </div>
+            {% if not user.is_authenticated %}
+                <div class="header-row-2 auth-off">
+                    <!-- <div class="burger-btns"></div> -->
+                    <div class="burger-wrapper burger-btns">
+                        <div class="burger-nav">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <ul class="header-nav">
+                        <!-- Не видны при авторизованном аккаунте -->
+                        <li><a href="{% url 'payment_page' %}">Оплатить заказ</a></li>
+                        <li><a href="{% url 'catalog_page' %}">Каталог</a></li>
+                        <li><a href="{% url 'news_page' %}">Новости</a></li>
+                    </ul>
+                    <ul class="header-account">
+                        {% if request.path != '/authorization' and request.path != '/registration' %}
+                        <li>
+                            <a id="LogBtn">Войти</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+
+                </div>
+            {% else %}
+                <div class="header-row-2 auth-on">
+                    <div class="burger-wrapper burger-btns">
+                        <div class="burger-nav">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <ul class="header-nav">
+                        <!-- Видны при авторизованном аккаунте-->
+                        <li><a href="{% url 'orders_page' %}">Заказы</a></li>
+                        <li><a href="{% url 'garage_page' %}">Гараж</a></li>
+                        <li><a href="{% url 'balance_page' %}">Баланс</a></li>
+                        <li><a href="{% url 'favorite_page' %}">Избранное</a></li>
+                        <li><a href="{% url 'catalog_page' %}">Каталог</a></li>
+                        <li><a href="{% url 'call_to_vin_page' %}">Запросы по VIN</a></li>
+                        <li><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt=""><a
+                                href="{% url 'basket_page' %}">Корзина</a></li>
+                    </ul>
+                    <ul class="header-account">
+                        <li><a href="{% url 'profile_page' %}">{{ user.email }}</a></li>
+                        {% if request.path != '/authorization' and request.path != '/registration' %}
+                        <li>
+                            {% csrf_token %}
+                            <a href="{% url 'logout' %}" class="logout-link">Выйти</a>
+                        </li>
+                        {% endif %}
+                        <li><a href="{% url 'promotion_page' %}" class="red-btn center">Акция</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+        <div class="mobile-header">
+            <div class="header-row-1">
+                <div class="burger-wrapper burger-btns">
+                    <div class="burger-nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <form class="header-search search" action="#">
+                    <input id="header-search" type="text" class="search-input"
+                        placeholder="Поиск по артикулу или VIN коду">
+                    <button class="search-btn red-btn">Найти</button>
+                </form>
+            </div>
+            {% if not user.is_authenticated %}
+                <div class="header-row-2 auth-off">
+                    <ul class="header-account">
+                        {% if request.path != '/authorization' and request.path != '/registration' %}
+                        <li>
+                            <a href="{% url 'authorization_page' %}">Войти</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    <ul class="header-contact">
+                        <li><a href="https://yandex.ru/maps/-/CDebNM~u">Адрес магазина</a></li>
+                        <li><a href="tel:+7 (918) 570-05-31">+7 (918) 570-05-31</a></li>
+                    </ul>
+                </div>
+            {% else %}
+                <div class="header-row-2 auth-on">
+                    <ul class="header-account">
+                        {% if request.path != '/authorization' and request.path != '/registration' %}
+                        <li><a href="{% url 'profile_page' %}">{{ user.email }}</a></li>
+                        <li>
+                            <a href="{% url 'logout' %}" class="logout-link">Выйти</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    <ul class="header-contact">
+                        <li><a href="https://yandex.ru/maps/-/CDqgzWZO">Адрес магазина</a></li>
+                        <li><a href="tel:+7 (918) 570-05-31">+7 (918) 570-05-31</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+

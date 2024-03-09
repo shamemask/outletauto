@@ -1,0 +1,140 @@
+{% extends 'base/base2.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block content %}
+<div class="wrapper registration">
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title">Регистрация пользователя</h1>
+                    <p class="description">Регистрация необходима для отображения актуальных цен и реальных сроков
+                        поставки на интересующие
+                        вас товары.
+                        Выберите удобный для вас магазин, а также укажите реальные контактные данные – они потребуются
+                        для завершения процедуры регистрации.</p>
+                    <div class="tab-wrapper">
+                        <div class="row-2 tab-interface">
+                            <div>
+                                <input type="button" value="Физическое лицо" class="transparent-btn tab-btn btn-active" data-tab="1">
+                            </div>
+                            <div>
+                                <input type="button" value="Юридическое лицо" class="transparent-btn tab-btn" data-tab="2">
+                            </div>
+                        </div>
+                        {% csrf_token %}
+                        <form method="post" class="tab tab-active">
+                            <div class="row-2">
+                                <div>
+                                    {{ fizform.shop_name }}
+                                    {{ fizform.full_name }}
+                                    <div class="row-2">
+                                        {{ fizform.password }}
+                                        {{ fizform.password2 }}
+                                    </div>
+                                    {% if fizform.password.errors %}
+                                        <div class="error-message">
+                                          {{ fizform.password.errors }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div>
+                                    {{ fizform.phone }}
+                                    {{ fizform.email }}
+                                    {% if fizform.email.errors %}
+                                        <div class="error-message">
+                                          {{ fizform.email.errors }}
+                                        </div>
+                                    {% endif %}
+                                    {{ fizform.promo_code }}
+                                </div>
+                            </div>
+                            <div class="check-center">
+                                <div class="check-with-label-wrapper">
+                                    {{ fizform.terms_of_service }}
+                                    {{ fizform.terms_of_service.label }}
+                                </div>
+                                <a href="{% url 'authorization_page' %}" class="red-btn" style="
+                                                                                            height: 50px;
+                                                                                            border: none;
+                                                                                            font-size: 14px;
+                                                                                            outline: none;
+                                                                                            margin-top: 20px;
+                                                                                            display: flex;
+                                                                                            align-items: center;
+                                                                                            justify-items: center;
+                                                                                            justify-content: center;
+                                                                                        "><p>Авторизоваться</p></a>
+                                <input type="submit" value="Зарегистрироваться" class="red-btn">
+                            </div>
+                        </form>
+                        {% csrf_token %}
+                        <form method="post" class="tab">
+                            <div class="row-2">
+                                <div>
+                                    {{ urform.city }}
+                                    {{ urform.shop }}
+                                    {{ urform.phone }}
+                                    {{ urform.email }}
+                                    {% if urform.email.errors %}
+                                        <div class="error-message">
+                                          {{ urform.email.errors }}
+                                        </div>
+                                    {% endif %}
+                                    {{ urform.full_name }}
+                                    <div class="row-2">
+                                        {{ urform.password }}
+                                        {{ urform.password2 }}
+                                    </div>
+                                    {% if urform.password.errors %}
+                                        <div class="error-message">
+                                          {{ urform.password.errors }}
+                                        </div>
+                                    {% endif %}
+                                    <p class="warning">Для обеспечения информационной безопаности не указывайте
+                                        пароли,
+                                        которые используете
+                                        на других сайтах</p>
+                                </div>
+                                <div>
+                                    <div class="row-2">
+                                        {{ urform.forma }}
+                                        {{ urform.company_name }}
+                                    </div>
+                                    {{ urform.legal_address }}
+                                    <div class="row-2">
+                                        {{ urform.inn }}
+                                        {{ urform.kpp }}
+                                    </div>
+                                    {{ urform.bank }}
+                                    {{ urform.bik }}
+                                    {{ urform.account_number }}
+                                    {{ urform.correspondent_account }}
+                                </div>
+                            </div>
+                            <div class="check-center">
+                                <div class="check-with-label-wrapper">
+                                    {{ urform.terms_of_service }}
+                                    {{ urform.terms_of_service.label }}
+                                </div>
+                                <a href="{% url 'authorization_page' %}" class="red-btn" style="
+                                                                                            height: 50px;
+                                                                                            border: none;
+                                                                                            font-size: 14px;
+                                                                                            outline: none;
+                                                                                            margin-top: 20px;
+                                                                                            display: flex;
+                                                                                            align-items: center;
+                                                                                            justify-items: center;
+                                                                                            justify-content: center;
+                                                                                        "><p>Авторизоваться</p></a>
+                                <input type="submit" value="Зарегистрироваться" class="red-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

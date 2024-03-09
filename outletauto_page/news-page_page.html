@@ -1,0 +1,35 @@
+{% extends 'base/base2.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block content %}
+
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <div class="new-content">
+                        <img src="{{new.img}}" alt="card-img" class="image-r news-image">
+                        <span class="date">{{new.date}}</span>
+                        <h2 class="title">{{new.title}}</h2>
+                        <p>{{new.text}}</p>
+                    </div>
+                    <div class="all-news">
+                        <span class="news-title">Посмотреть другие новости</span>
+                        <div class="news-card">
+                            {% for new_page in news %}
+                            <div class="card">
+                                <a href="{% url 'news_page_page' index=forloop.counter %}">
+                                    <span class="card-date">{{new.date}}</span>
+                                </a>
+                                <a href="{% url 'news_page_page' index=forloop.counter %}">
+                                    <p class="card-title">{{new_page.title}}</p>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
