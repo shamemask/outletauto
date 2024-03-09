@@ -1,27 +1,15 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const BASE_URL = 'http://outletavto.ru'
-// BASE_URL = 'http://localhost:8000'
+// const BASE_URL = 'http://outletavto.ru'
+const BASE_URL = 'http://localhost:8000'
 
 
 
 // Создаем thunk для получения данных с бэкенда
 export const fetchData2 = createAsyncThunk("data/fetchData", async () => {
   // post запрос
-  const response = await fetch(BASE_URL +"/api/v1/",
-  {
-    method: 'POST',
-    mode: 'cors',
-    credentials: 'include',
-    headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-    },
-
-  }
-  
-  );
+  const response = await axios.post(BASE_URL +"/api/v1/");
   const data = await response.data;
   console.log(data);
   return data;
@@ -29,7 +17,7 @@ export const fetchData2 = createAsyncThunk("data/fetchData", async () => {
 
 // Создаем срез данных
 export const dataSlice = createSlice({
-  name: "props",
+  name: "data",
   initialState: {
     items: [],
     loading: false,

@@ -12,7 +12,7 @@ const BalancePage = (props) => {
                                     <span>На счету</span>
                                     <span>10 000 руб</span>
                                 </div>
-                                <a href="{% url 'payment_page' %}" class="red-btn center">Пополнить</a>
+                                <a href="payment_page" class="red-btn center">Пополнить</a>
                             </div>
                         </div>
                         <div class="balance-card-wrapper">
@@ -22,7 +22,7 @@ const BalancePage = (props) => {
                                     <span>На счету</span>
                                     <span>300 руб</span>
                                 </div>
-                                <a href="{% url 'payment_page' %}" class="red-btn center">Пополнить</a>
+                                <a href="payment_page" class="red-btn center">Пополнить</a>
                             </div>
                         </div>
                     </div>

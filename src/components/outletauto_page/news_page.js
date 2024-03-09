@@ -1,6 +1,6 @@
 
 const NewsPage = (props) => {
-    cycle = props.news.map((_new, index) => {
+    cycle = props?.news?.map((_new, index) => {
         return (
             <div class="news-card">
                 <div class="card-img">

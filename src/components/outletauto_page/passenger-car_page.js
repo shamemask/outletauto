@@ -473,8 +473,8 @@ const PassengerCarPage = (props) => {
             </div>
         </div>
     </div>
-</div><script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
-<script src="{% static 'outletauto/assets/js/index.js' %}"></script>
+</div><script src="js/tabs.js"></script>
+<script src="js/index.js"></script>
 </>
     )
 }

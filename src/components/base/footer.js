@@ -8,10 +8,10 @@ const Footer = () => {
                 </ul>
                 <ul>
                     <li><a href="#">
-                            <img src={require('../../assets/imgs/icon/вацап.svg')} alt="whatsapp" />
+                            <img src='imgs/icon/вацап.svg' alt="whatsapp" />
                         </a></li>
                     <li><a href="#">
-                            <img src={require('../../assets/imgs/icon/telegram.svg')} alt="telegram" />
+                            <img src='imgs/icon/telegram.svg' alt="telegram" />
                         </a></li>
                 </ul>
             </div>

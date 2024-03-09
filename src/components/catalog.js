@@ -7,7 +7,7 @@ const Catalog = (props) =>{
         <form class="catalog-search search show-animation" action="#">
             <span class="parameters">Подбор по параметрам</span>
             <input type="text" class="search-input" placeholder="Поиск по каталогу"/>
-            <a href="{% url 'universal_catalog_page' %}" class="search-btn red-btn">Найти</a>
+            <a href="universal_catalog_page" class="search-btn red-btn">Найти</a>
         </form>
         <div class="catalog-grid">
             <div class="catalog-card show-animation">

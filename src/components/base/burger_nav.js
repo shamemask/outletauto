@@ -5,7 +5,7 @@ const BurgerNav = () => {
         <div class="burger-nav-wrapper burger-btns">
             <div class="container">
                 <div class="logotype">
-                    <img src={require('../../assets/imgs/logotype.svg')} alt="logotype"/>
+                    <img src='imgs/logotype.svg' alt="logotype"/>
                 </div>
                 <div class="nav-content">
                     <ul class="col">

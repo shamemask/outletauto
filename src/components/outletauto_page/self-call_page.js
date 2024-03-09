@@ -6,7 +6,7 @@ const SelfCallPage = () => {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Страница авторизации - OutletAuto</title>
-            <link rel="stylesheet" href={require('../../assets/css/style.css')}}>
+            <link rel="stylesheet" href="css/style.css"}>
         </head>
         <body>
             <div class="wrapper self-call silver-bg">
@@ -16,7 +16,7 @@ const SelfCallPage = () => {
                             <div class="header-row-1">
                                 <div class="logotype-wrapper header-logotype">
                                     <Link to="/">
-                                        <img src={require('../../assets/imgs/logotype.svg')} alt="logotype" class="logotype"/>
+                                        <img src="imgs/logotype.svg" alt="logotype" class="logotype"/>
                                     </Link>
                                 </div>
                                 <form class="header-search search" action="#">
@@ -38,12 +38,12 @@ const SelfCallPage = () => {
                                 </div>
                                 <ul class="header-nav">
                                     <!-- Не видны при авторизованном аккаунте -->
-                                    <li><a href="{% url 'html' html='payment' %}">Оплатить заказ</a></li>
-                                    <li><a href="{% static 'outletauto/pages/cataloog' %}">Каталог</a></li>
-                                    <li><a href="{% url 'html' html='news' %}">Новости</a></li>
+                                    <li><a href="html' html='payment">Оплатить заказ</a></li>
+                                    <li><a href="{% static 'outletauto/pages/cataloog">Каталог</a></li>
+                                    <li><a href="html' html='news">Новости</a></li>
                                 </ul>
                                 <ul class="header-account">
-                                    <li><a href="{% static 'outletauto/pages/authorization.html' %}">Личный кабинет</a></li>
+                                    <li><a href="{% static 'outletauto/pages/authorization.html">Личный кабинет</a></li>
                                 </ul>
 
                             </div>
@@ -61,19 +61,19 @@ const SelfCallPage = () => {
                                     <li><a href="#">Гараж</a></li>
                                     <li><a href="#">Баланс</a></li>
                                     <li><a href="#">Избранное</a></li>
-                                    <li><a href="{% static 'outletauto/pages/cataloog' %}">Каталог</a></li>
+                                    <li><a href="{% static 'outletauto/pages/cataloog">Каталог</a></li>
                                     <li><a href="#">Запросы по VIN</a></li>
-                                    <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt="basket"><a
-                                            href="{% static 'outletauto/pages/basket.html' %}">Корзина</a></li>
+                                    <li class="basket"><img src="imgs/icon/basket__shop.svg" alt="basket"><a
+                                            href="{% static 'outletauto/pages/basket.html">Корзина</a></li>
                                 </ul>
                                 <ul class="header-account">
                                     <ul class="account-name">
-                                        <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
+                                        <li><a href="{% static 'outletauto/pages/profile.html">RDN-12454</a></li>
                                         <li><input type="button" class="red-btn" value="Акция"></li>
                                     </ul>
                                     <ul class="basket-wrapper">
-                                        <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt="basket"><a
-                                                href="{% static 'outletauto/pages/basket.html' %}">Корзина</a></li>
+                                        <li class="basket"><img src="imgs/icon/basket__shop.svg" alt="basket"><a
+                                                href="{% static 'outletauto/pages/basket.html">Корзина</a></li>
                                     </ul>
                                 </ul>
                             </div>
@@ -95,7 +95,7 @@ const SelfCallPage = () => {
                             </div>
                             <div class="header-row-2 auth-off">
                                 <ul class="header-account">
-                                    <li><a href="{% static 'outletauto/pages/authorization.html' %}">Личный кабинет</a></li>
+                                    <li><a href="{% static 'outletauto/pages/authorization.html">Личный кабинет</a></li>
                                 </ul>
                                 <ul class="header-contact">
                                     <li><a href="#">Адреса магазинов</a></li>
@@ -104,7 +104,7 @@ const SelfCallPage = () => {
                             </div>
                             <div class="header-row-2 auth-on">
                                 <ul class="header-account">
-                                    <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
+                                    <li><a href="{% static 'outletauto/pages/profile.html">RDN-12454</a></li>
                                 </ul>
                                 <ul class="header-contact">
                                     <li><a href="#">Адреса магазинов</a></li>
@@ -128,7 +128,7 @@ const SelfCallPage = () => {
                                     <div class="address-info">
                                         <span class="address-title">Адрес магазина</span>
                                         <ul class="address-content">
-                                            <li><img src="{% static 'outletauto/assets/imgs/icon/map.svg' %}" alt="map"><a href="#"
+                                            <li><img src="imgs/icon/map.svg" alt="map"><a href="#"
                                                     class="bold">OuletAvto –
                                                     Ленинградка</a></li>
                                             <li><span>г. Москва, Ленинградское шоссе, д.58 с.53 (м. Водный стадион)</span></li>
@@ -171,13 +171,13 @@ const SelfCallPage = () => {
                         </ul>
                         <ul>
                             <li><a href="#">
-                                    <img src="{% static 'outletauto/assets/imgs/icon/vk.svg' %}" alt="vk">
+                                    <img src="imgs/icon/vk.svg" alt="vk">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{% static 'outletauto/assets/imgs/icon/вацап.svg' %}" alt="whatsapp">
+                                    <img src="imgs/icon/вацап.svg" alt="whatsapp">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="{% static 'outletauto/assets/imgs/icon/telegram.svg' %}" alt="telegram">
+                                    <img src="imgs/icon/telegram.svg" alt="telegram">
                                 </a></li>
                         </ul>
                     </div>
@@ -239,7 +239,7 @@ const SelfCallPage = () => {
                             </svg>
                             <span>Баланс</span>
                         </a>
-                        <a href="{% static 'outletauto/pages/pages/basket.html' %}" class="btn-wrapper">
+                        <a href="{% static 'outletauto/pages/pages/basket.html" class="btn-wrapper">
                             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M4.25 7.18502C4.25 7.7373 4.69772 8.18502 5.25 8.18502H7.39814L12.7523 21.2731C12.9338 21.7165 13.4042 21.969 13.874 21.875L25.0595 19.6379C25.4266 19.5645 25.722 19.2921 25.8249 18.9321L27.8117 11.9783C27.9942 11.3394 27.5145 10.7035 26.8502 10.7035H11.8055L9.56342 6.21929C9.39403 5.88051 9.04777 5.6665 8.66899 5.6665H5.25C4.69772 5.6665 4.25 6.11422 4.25 6.6665V7.18502ZM13.0648 25.8147C13.0648 27.2056 11.9373 28.3332 10.5463 28.3332C9.1554 28.3332 8.02782 27.2056 8.02782 25.8147C8.02782 24.4237 9.1554 23.2962 10.5463 23.2962C11.9373 23.2962 13.0648 24.4237 13.0648 25.8147ZM25.6573 25.8147C25.6573 27.2056 24.5298 28.3332 23.1388 28.3332C21.7479 28.3332 20.6203 27.2056 20.6203 25.8147C20.6203 24.4237 21.7479 23.2962 23.1388 23.2962C24.5298 23.2962 25.6573 24.4237 25.6573 25.8147Z"
@@ -250,7 +250,7 @@ const SelfCallPage = () => {
                     </div>
                 </div>
             </div>
-            <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
+            <script src="js/tabs.js"></script>
         </body>
 
         </html>

@@ -9,7 +9,7 @@ const Header = (props) => {
                     <div class="header-row-1">
                         <div class="logotype-wrapper header-logotype">
                             <Link to="/" >
-                                <img src={require('../../assets/imgs/logotype.svg')} alt="logotype" class="logotype" />
+                                <img src='imgs/logotype.svg' alt="logotype" class="logotype" />
                             </Link>
                         </div>
                         <form class="header-search search" action="#">
@@ -21,7 +21,7 @@ const Header = (props) => {
                             <li><a href="tel:+7 (918) 570-05-31">+7 (918) 570-05-31</a></li>
                         </ul>
                     </div>
-                    {!props.user.is_authenticated ? (
+                    {!props?.user?.is_authenticated ? (
                         <div class="header-row-2 auth-off">
                             <div class="burger-wrapper burger-btns">
                                 <div class="burger-nav">
@@ -37,7 +37,7 @@ const Header = (props) => {
                                 <li><Link to="/news">Новости</Link></li>
                             </ul>
                             <ul class="header-account">
-                                {props.request.path != '/authorization' && props.request.path != '/registration' &&
+                                {window.location.pathname != '/authorization' && window.location.pathname != '/registration' &&
                                     <li>
                                         <a id="LogBtn">Войти</a>
                                     </li>
@@ -62,13 +62,13 @@ const Header = (props) => {
                                 <li><Link to="/favorite">Избранное</Link></li>
                                 <li><Link to="/catalog">Каталог</Link></li>
                                 <li><Link to="/call_to_vin">Запросы по VIN</Link></li>
-                                <li><img src={require('../../assets/imgs/icon/basket__shop.svg')} alt="" />
+                                <li><img src='imgs/icon/basket__shop.svg' alt="" />
                                     <Link to="/basket">Корзина</Link></li>
 
                             </ul>
                             <ul class="header-account">
                                 <li><Link to="/profile">{props.user.email}</Link></li>
-                                {props.request.path != '/authorization' && props.request.path != '/registration' &&
+                                {window.location.pathname != '/authorization' && window.location.pathname != '/registration' &&
                                     <li>
                                         <Link to="/logout" class="logout-link">Выйти</Link>
                                     </li>
@@ -93,10 +93,10 @@ const Header = (props) => {
                             <button class="search-btn red-btn">Найти</button>
                         </form>
                     </div>
-                    {!props.user.is_authenticated ? (
+                    {!props?.user?.is_authenticated ? (
                         <div class="header-row-2 auth-off">
                             <ul class="header-account">
-                                {props.request.path != '/authorization' && props.request.path != '/registration' &&
+                                {window.location.pathname != '/authorization' && window.location.pathname != '/registration' &&
                                     <li>
                                         <Link to="/authorization">Войти</Link>
                                     </li>
@@ -110,8 +110,8 @@ const Header = (props) => {
                     ) : (
                         <div class="header-row-2 auth-on">
                             <ul class="header-account">
-                                {props.request.path != '/authorization' && props.request.path != '/registration' &&
-                                    <><li><Link to="/profile"> {props.user.email} </Link></li><li>
+                                {window.location.pathname != '/authorization' && window.location.pathname != '/registration' &&
+                                    <><li><Link to="/profile"> {props?.user?.email} </Link></li><li>
                                         <Link to="/logout" class="logout-link">Выйти</Link>
                                     </li></>
                                 }

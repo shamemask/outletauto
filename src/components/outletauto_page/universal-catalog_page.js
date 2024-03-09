@@ -383,7 +383,7 @@ const UniversalCatalogPage = (props) => {
                                             </svg>
                                         </button>
                                         <a href="#" class="card-image">
-                                            <img src={require('../../assets/imgs/image.png')} alt="oil"/>
+                                            <img src="imgs/image.png" alt="oil"/>
                                             </a>
                                         <div class="card-content">
                                             <a href="#">
@@ -542,7 +542,7 @@ const UniversalCatalogPage = (props) => {
                                             </svg>
                                         </button>
                                         <a href="#" class="card-image">
-                                            <img src={require('../../assets/imgs/image.png')} alt="oil"/>
+                                            <img src="imgs/image.png" alt="oil"/>
                                             </a>
                                         <div class="card-content">
                                             <a href="#">
@@ -701,7 +701,7 @@ const UniversalCatalogPage = (props) => {
                                             </svg>
                                         </button>
                                         <a href="#" class="card-image">
-                                            <img src={require('../../assets/imgs/image.png')} alt="oil"/>
+                                            <img src="imgs/image.png" alt="oil"/>
                                             </a>
                                         <div class="card-content">
                                             <a href="#">
@@ -856,7 +856,7 @@ const UniversalCatalogPage = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg')} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                             <div class="closed-catalog-popup">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                     viewBox="0 0 40 40" fill="none">
@@ -922,7 +922,7 @@ const UniversalCatalogPage = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg')} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                             <div class="closed-catalog-popup">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                     viewBox="0 0 40 40" fill="none">
@@ -1151,7 +1151,7 @@ const UniversalCatalogPage = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg')} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                             <div class="closed-catalog-popup">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                     viewBox="0 0 40 40" fill="none">
@@ -1435,12 +1435,12 @@ const UniversalCatalogPage = (props) => {
                     </div>
                 </div>
             </div>
-        </div><script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
-        <script src="{% static 'outletauto/assets/js/catalog-pop.js' %}"></script>
-        <script src="{% static 'outletauto/assets/js/starRating.js' %}"></script>
-        <script src="{% static 'outletauto/assets/js/accordion.js' %}"></script>
-        <script src="{% static 'outletauto/assets/js/filterSidebar.js' %}"></script>
-        <script src="{% static 'outletauto/assets/js/select-all.js' %}"></script>
+        </div><script src="js/dropped.js"></script>
+        <script src="js/catalog-pop.js"></script>
+        <script src="js/starRating.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/filterSidebar.js"></script>
+        <script src="js/select-all.js"></script>
         <script>
             const filter = new Filter("filter-test", [
                 {

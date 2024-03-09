@@ -404,7 +404,7 @@ const _UniversalCatalog = (props) => {
                                             </svg>
                                         </button>
                                         <a href="#" class="card-image">
-                                            <img src={require('../../assets/imgs/image.png')} alt="oil"/>
+                                            <img src="imgs/image.png" alt="oil"/>
                                         </a>
                                         <div class="card-content">
                                             <a href="#">
@@ -484,7 +484,7 @@ const _UniversalCatalog = (props) => {
                                             </svg>
                                         </button>
                                         <a href="#" class="card-image">
-                                            <img src={require('../../assets/imgs/oil.png')} alt="oil"/>
+                                            <img src="imgs/oil.png" alt="oil"/>
                                         </a>
                                         <div class="card-content">
                                             <a href="#">
@@ -561,7 +561,7 @@ const _UniversalCatalog = (props) => {
                                             </svg>
                                         </button>
                                         <a href="#" class="card-image">
-                                            <img src={require('../../assets/imgs/oil.png')} alt="oil"/>
+                                            <img src="imgs/oil.png" alt="oil"/>
                                         </a>
                                         <div class="card-content">
                                             <a href="#">
@@ -634,7 +634,7 @@ const _UniversalCatalog = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg')} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -700,7 +700,7 @@ const _UniversalCatalog = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -929,7 +929,7 @@ const _UniversalCatalog = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg').default} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg').default} class="logotype" alt="logotype"/>
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -1215,11 +1215,11 @@ const _UniversalCatalog = (props) => {
             </div>
         </div>
 
-    <script src={require('../assets/js/catalog-pop.js')}></script>
-    <script src={require('../assets/js/starRating-pop.js')}></script>
-    <script src={require('../assets/js/accordion.js')}></script>
-    <script src={require('../assets/js/filterSidebar.js')}></script>
-    <script src={require('../assets/js/select-all.js')}></script>
+    <script src={require('../assets/js/catalog-pop.js"></script>
+    <script src={require('../assets/js/starRating-pop.js"></script>
+    <script src={require('../assets/js/accordion.js"></script>
+    <script src={require('../assets/js/filterSidebar.js"></script>
+    <script src={require('../assets/js/select-all.js"></script>
     {filter}
         </>
     )

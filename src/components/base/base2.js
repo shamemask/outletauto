@@ -48,8 +48,8 @@ const BasePage2 = (props, MainContent) => {
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>{props.page_title} - OutletAuto</title>
-                <link rel="icon" href={require('../../assets/imgs/favicon.ico')} />
-                <link rel="stylesheet" href={require('../../assets/css/style2.css')} />
+                <link rel="icon" href="imgs/favicon.ico" />
+                <link rel="stylesheet" href="css/style2.css" />
                 <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
                 <meta name="google-site-verification" content="nH6uS_83NnR5CMs1X97Ww8U7stcOcu0MUQHIIpIHnIs" />
 
@@ -66,7 +66,7 @@ const BasePage2 = (props, MainContent) => {
                     </div>
                     <Footer />
                 </div>
-                {!props.user.is_authenticated && (
+                {!props?.user?.is_authenticated && (
                     // Render React components for registration and authentication modals
                     <>
                         <RegModal />
@@ -75,38 +75,38 @@ const BasePage2 = (props, MainContent) => {
                 )}
             </body>
 
-            <script src={require('../../assets/js/elem-shiow.js')}></script>
-            <script src={require('../../assets/js/tabs.js')}></script>
-            <script src={require('../../assets/js/registration.js')}></script>
-            <script src={require('../../assets/js/index.js')}></script>
+            <script src="js/elem-shiow.js"></script>
+            <script src="js/tabs.js"></script>
+            <script src="js/registration.js"></script>
+            <script src="js/index.js"></script>
 
-            <script src={require('../../assets/js/order.js')}></script>
-            <script src={require('../../assets/js/validation.js')}></script>
+            <script src="js/order.js"></script>
+            <script src="js/validation.js"></script>
 
             <style>
                 {`
                         .DEV_PANEL {
                             ${Object.entries(devPanelStyle)
                         .map(([key, value]) => `${key}: ${value};`)
-                        .join('\n')}
+                        .join('\n"
                         }
 
                         .DEV_PANEL-content {
                             ${Object.entries(devPanelContentStyle)
                         .map(([key, value]) => `${key}: ${value};`)
-                        .join('\n')}
+                        .join('\n"
                         }
 
                         .DEV_PANEL .life {
                             ${Object.entries(lifeStyle)
                         .map(([key, value]) => `${key}: ${value};`)
-                        .join('\n')}
+                        .join('\n"
                         }
 
                         .life-active {
                             ${Object.entries(lifeActiveStyle)
                         .map(([key, value]) => `${key}: ${value} !important;`)
-                        .join('\n')}
+                        .join('\n"
                         }
                     `}
             </style>

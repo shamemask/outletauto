@@ -27,7 +27,7 @@ const CompanyPage = (props) => {
                         позволяют предоставлять клиентам только качественные запчасти и строго соблюдать обязательства
                         по логистике!</p>
                     <div class="logotype-wrapper">
-                        <img class="logotype" src={require('../../assets/imgs/logotype.svg')} alt="logotype"/>
+                        <img class="logotype" src="imgs/logotype.svg" alt="logotype"/>
                     </div>
                 </div>
             </div>

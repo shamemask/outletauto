@@ -32,7 +32,7 @@ const MainPage = (props) => {
                                         </span>
                                         <ul class="drop-down-list">
 
-                                            {props.catalogue.map((page) =>
+                                            {props?.catalogue?.map((page) =>
                                                 <li class="drop-down-li">
                                                     <Link to="/catalog" class="drop-down-item">{page}</Link>
                                                 </li>
@@ -49,7 +49,7 @@ const MainPage = (props) => {
                                             Популярные детали
                                         </span>
                                         <ul class="drop-down-list">
-                                            {props.popular.map((page) =>
+                                            {props?.popular?.map((page) =>
                                                 <li class="drop-down-li">
                                                     <Link to="/catalog" class="drop-down-item">{page}</Link>
                                                 </li>
@@ -60,20 +60,20 @@ const MainPage = (props) => {
                             </div>
                             <div class="offer-btn-wrapper">
                                 <div class="circle-btn-wrapper">
-                                    <a href="{% url 'club_page' %}" class="circle-btn">
+                                    <a href="club_page" class="circle-btn">
                                         <div class="circle">
                                             <div class="cirle-content">
-                                                <img src="{require('../../assets/imgs/icon/bi_people.svg')}" alt="present" />
+                                                <img src='imgs/icon/bi_people.svg' alt="present" />
                                             </div>
                                         </div>
                                         <span>Вступить в клуб</span>
                                     </a>
                                 </div>
                                 <div class="circle-btn-wrapper">
-                                    <a href="{% url 'promotion_page' %}" class="circle-btn">
+                                    <a href="promotion_page" class="circle-btn">
                                         <div class="circle">
                                             <div class="cirle-content">
-                                                <img src="{require('../../assets/imgs/icon/present.svg')}" alt="present" />
+                                                <img src="imgs/icon/present.svg" alt="present" />
                                             </div>
                                         </div>
                                         <span>Получить подарок</span>

@@ -20,13 +20,13 @@ const ClubPage = (props) => {
                             <span class="network-title">Наши соцсети</span>
                             <ul class="networks">
                                 <li><a href="#">
-                                        <img src={require('../../assets/imgs/icon/vk.svg')} alt="vk"/>
+                                        <img src="imgs/icon/vk.svg" alt="vk"/>
                                     </a></li>
                                 <li><a href="#">
-                                        <img src={require('../../assets/imgs/icon/whatsapp.svg')} alt="whatsapp"/>
+                                        <img src="imgs/icon/whatsapp.svg" alt="whatsapp"/>
                                     </a></li>
                                 <li><a href="#">
-                                        <img src={require('../../assets/imgs/icon/telegram.svg')} alt="telegram"/>
+                                        <img src="imgs/icon/telegram.svg" alt="telegram"/>
                                     </a></li>
                             </ul>
                         </div>

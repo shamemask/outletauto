@@ -27,28 +27,28 @@ const RegModal = (props) => {
                                 <form method="post" class="tab tab-active">
                                     <div class="row-2">
                                         <div>
-                                            { props.fizform.shop_name }
-                                            { props.fizform.full_name }
+                                            { props?.fizform?.shop_name }
+                                            { props?.fizform?.full_name }
                                             <div class="row-2">
-                                                { props.fizform.password }
-                                                { props.fizform.password2 }
+                                                { props?.fizform?.password }
+                                                { props?.fizform?.password2 }
                                             </div>
                                         </div>
                                         <div>
-                                            { props.fizform.phone }
-                                            { props.fizform.email }
-                                            { props.fizform.email.errors && (
+                                            { props?.fizform?.phone }
+                                            { props?.fizform?.email }
+                                            { props?.fizform?.email.errors && (
                                                 <div class="error-message">
-                                                  { props.fizform.email.errors }
+                                                  { props?.fizform?.email.errors }
                                                 </div>
                                             ) }
-                                            { props.fizform.promo_code }
+                                            { props?.fizform?.promo_code }
                                         </div>
                                     </div>
                                     <div class="check-center">
                                         <div class="check-with-label-wrapper">
-                                            { props.fizform.terms_of_service }
-                                            { props.fizform.terms_of_service.label }
+                                            { props?.fizform?.terms_of_service }
+                                            { props?.fizform?.terms_of_service.label }
                                         </div>
                                         <input type="submit" value="Зарегистрироваться" class="red-btn" />
                                     </div>
@@ -56,34 +56,34 @@ const RegModal = (props) => {
                                 <form method="post" class="tab">
                                     <div class="row-2">
                                         <div>
-                                            { props.urform.city }
-                                            { props.urform.shop }
-                                            { props.urform.phone }
-                                            { props.urform.email }
-                                            { props.urform.full_name }
+                                            { props?.urform?.city }
+                                            { props?.urform?.shop }
+                                            { props?.urform?.phone }
+                                            { props?.urform?.email }
+                                            { props?.urform?.full_name }
                                             <div class="row-2">
-                                                { props.urform.password }
-                                                { props.urform.password2 }
+                                                { props?.urform?.password }
+                                                { props?.urform?.password2 }
                                             </div>
                                         </div>
                                         <div>
-                                            { props.urform.forma }
-                                            { props.urform.company_name }
-                                            { props.urform.legal_address }
+                                            { props?.urform?.forma }
+                                            { props?.urform?.company_name }
+                                            { props?.urform?.legal_address }
                                             <div class="row-2">
-                                                { props.urform.inn }
-                                                { props.urform.kpp }
+                                                { props?.urform?.inn }
+                                                { props?.urform?.kpp }
                                             </div>
-                                            { props.urform.bank }
-                                            { props.urform.bik }
-                                            { props.urform.account_number }
-                                            { props.urform.correspondent_account }
+                                            { props?.urform?.bank }
+                                            { props?.urform?.bik }
+                                            { props?.urform?.account_number }
+                                            { props?.urform?.correspondent_account }
                                         </div>
                                     </div>
                                     <div class="check-center">
                                         <div class="check-with-label-wrapper">
-                                            { props.urform.terms_of_service }
-                                            { props.urform.terms_of_service.label }
+                                            { props?.urform?.terms_of_service }
+                                            { props?.urform?.terms_of_service.label }
                                         </div>
                                         <input type="submit" value="Зарегистрироваться" class="red-btn" />
                                     </div>

@@ -37,10 +37,10 @@ const UniversalCatalogTire2_page = (props) => {
                 </div>
             </div>
         </div>
-        <script src={require('../../assets/js/tabs.js')}></script>
-        <script src={require('../../assets/js/index.js')}></script>
-        <script src={require('../../assets/js/dropped.js')}></script>
-        <script src={require('../../assets/js/accordion.js')}></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/dropped.js"></script>
+        <script src="js/accordion.js"></script>
         <script>
             const droppedList = document.querySelectorAll('.sidebar-list');
             new Accordion(droppedList)

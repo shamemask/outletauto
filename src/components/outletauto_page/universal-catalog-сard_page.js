@@ -164,9 +164,9 @@ const UniversalCatalogСardPage = (props) => {
                                     оригинал</p>
                             </div>
                             <div class="comment-image">
-                                <img src={require('../../assets/imgs/accessories.png')} alt="image_name"
+                                <img src="imgs/accessories.png" alt="image_name"
                                     class="comment-image__image image-popup" />
-                                <img src={require('../../assets/imgs/accessories.png')} alt="image_name"
+                                <img src="imgs/accessories.png" alt="image_name"
                                     class="comment-image__image image-popup" />
                             </div>
                             <div class="answer">
@@ -182,9 +182,9 @@ const UniversalCatalogСardPage = (props) => {
                                         <p>через какое направление заказываете ?</p>
                                     </div>
                                     <div class="comment-image">
-                                        <img src={require('../../assets/imgs/accessories.png')} alt="image_name"
+                                        <img src="imgs/accessories.png" alt="image_name"
                                             class="comment-image__image image-popup" />
-                                        <img src={require('../../assets/imgs/accessories.png')} alt="image_name"
+                                        <img src="imgs/accessories.png" alt="image_name"
                                             class="comment-image__image image-popup" />
                                     </div>
                                     <div class="answer">
@@ -272,12 +272,12 @@ const UniversalCatalogСardPage = (props) => {
                 </div>
             </div>
         </div>
-        <script src={require('../../assets/js/popUpImage.js')}></script>
-        <script src={require('../../assets/js/tabs.js')}></script>
-        <script src={require('../../assets/js/index.js')}></script>
-        <script src={require('../../assets/js/starRating.js')}></script>
-        <script src={require('../../assets/js/dropped.js')}></script>
-        <script src={require('../../assets/js/star-bar.js')}></script>
+        <script src="js/popUpImage.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/starRating.js"></script>
+        <script src="js/dropped.js"></script>
+        <script src="js/star-bar.js"></script>
         <script>
             const image = new popUpImage('image-popup');
         </script></>

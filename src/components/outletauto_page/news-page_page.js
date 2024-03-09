@@ -13,7 +13,7 @@ const NewsPage_page = (props) => {
                         <span class="news-title">Посмотреть другие новости</span>
                         <div class="news-card">
                             {
-                                props.news.map((new_page, index) => {
+                                props?.news?.map((new_page, index) => {
                                     return (
                                         <div class="card">
                                             <Link href={`/news_page_page/${index + 1}`}>

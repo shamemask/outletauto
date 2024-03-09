@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница авторизации - OutletAuto</title>
-    <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
-    <link rel="icon" href="{% static 'outletauto/assets/imgs/favicon.ico' %}">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imgs/favicon.ico">
 </head>
 
 <body>
@@ -17,8 +17,8 @@
                 <div class="pc-header">
                     <div class="header-row-1">
                         <div class="logotype-wrapper header-logotype">
-                            <a href="{% static 'outletauto/index.html' %}">
-                                <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype" class="logotype">
+                            <a href="{% static 'outletauto/index.html">
+                                <img src="imgs/logotype.svg" alt="logotype" class="logotype">
                             </a>
                         </div>
                         <form class="header-search search" action="#">
@@ -41,12 +41,12 @@
                         </div>
                         <ul class="header-nav">
                             <!-- Не видны при авторизованном аккаунте -->
-                            <li><a href="{% url 'html' html='payment' %}">Оплатить заказ</a></li>
-                            <li><a href="{% static 'outletauto/pages/catalog' %}">Каталог</a></li>
-                            <li><a href="{% url 'html' html='news' %}">Новости</a></li>
+                            <li><a href="html' html='payment">Оплатить заказ</a></li>
+                            <li><a href="{% static 'outletauto/pages/catalog">Каталог</a></li>
+                            <li><a href="html' html='news">Новости</a></li>
                         </ul>
                         <ul class="header-account">
-                            <li><a href="{% static 'outletauto/pages/authorization.html' %}">Личный кабинет</a></li>
+                            <li><a href="{% static 'outletauto/pages/authorization.html">Личный кабинет</a></li>
                         </ul>
 
                     </div>
@@ -64,18 +64,18 @@
                             <li><a href="#">Гараж</a></li>
                             <li><a href="#">Баланс</a></li>
                             <li><a href="#">Избранное</a></li>
-                            <li><a href="{% static 'outletauto/pages/cataloog' %}">Каталог</a></li>
+                            <li><a href="{% static 'outletauto/pages/cataloog">Каталог</a></li>
                             <li><a href="#">Запросы по VIN</a></li>
-                            <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt=""><a
+                            <li class="basket"><img src="imgs/icon/basket__shop.svg" alt=""><a
                                     href="#">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
                             <ul class="account-name">
-                                <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
+                                <li><a href="{% static 'outletauto/pages/profile.html">RDN-12454</a></li>
                                 <li><input type="button" class="red-btn" value="Акция"></li>
                             </ul>
                             <ul class="basket-wrapper">
-                                <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt=""><a
+                                <li class="basket"><img src="imgs/icon/basket__shop.svg" alt=""><a
                                         href="#">Корзина</a></li>
                             </ul>
                         </ul>
@@ -98,7 +98,7 @@
                     </div>
                     <div class="header-row-2 auth-off">
                         <ul class="header-account">
-                            <li><a href="{% static 'outletauto/pages/authorization.html' %}">Личный кабинет</a></li>
+                            <li><a href="{% static 'outletauto/pages/authorization.html">Личный кабинет</a></li>
                         </ul>
                         <ul class="header-contact">
                             <li><a href="#">Адреса магазинов</a></li>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="header-row-2 auth-on">
                         <ul class="header-account">
-                            <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
+                            <li><a href="{% static 'outletauto/pages/profile.html">RDN-12454</a></li>
                         </ul>
                         <ul class="header-contact">
                             <li><a href="#">Адреса магазинов</a></li>
@@ -144,7 +144,7 @@
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" class="logotype" alt="logotype">
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype">
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -199,7 +199,7 @@
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" class="logotype" alt="logotype">
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype">
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -265,7 +265,7 @@
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" class="logotype" alt="logotype">
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype">
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -494,7 +494,7 @@
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" class="logotype" alt="logotype">
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype">
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -788,13 +788,13 @@
                 </ul>
                 <ul>
                     <li><a href="#">
-                            <img src="{% static 'outletauto/assets/imgs/icon/vk.svg' %}" alt="vk">
+                            <img src="imgs/icon/vk.svg" alt="vk">
                         </a></li>
                     <li><a href="#">
-                            <img src="{% static 'outletauto/assets/imgs/icon/вацап.svg' %}" alt="whatsapp">
+                            <img src="imgs/icon/вацап.svg" alt="whatsapp">
                         </a></li>
                     <li><a href="#">
-                            <img src="{% static 'outletauto/assets/imgs/icon/telegram.svg' %}" alt="telegram">
+                            <img src="imgs/icon/telegram.svg" alt="telegram">
                         </a></li>
                 </ul>
             </div>
@@ -804,7 +804,7 @@
     <div class="burger-nav-wrapper">
         <div class="container">
             <div class="logotype">
-                <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype">
+                <img src="imgs/logotype.svg" alt="logotype">
             </div>
             <div class="nav-content">
                 <ul class="col">
@@ -819,8 +819,8 @@
                 </ul>
                 <ul class="col">
                     <span class="col-greeting">Клиентам</span>
-                    <li><a href="{% static 'outletauto/pages/promotion' %}">Акции</a></li>
-                    <li><a href="{% static 'outletauto/pages/promotion' %}">Скидки</a></li>
+                    <li><a href="{% static 'outletauto/pages/promotion">Акции</a></li>
+                    <li><a href="{% static 'outletauto/pages/promotion">Скидки</a></li>
                     <li><a href="#">Спецпредложения</a< /li>
                     <li><a href="#">Мобильное приложение</a></li>
                     <li><a href="#">Подарочные сертификаты</a></li>
@@ -833,7 +833,7 @@
                 </ul>
                 <ul class="col">
                     <span class="col-greeting">Компания</span>
-                    <li><a href="{% url 'html' html='news' %}">Новости</a></li>
+                    <li><a href="html' html='news">Новости</a></li>
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Магазины</a></li>
                     <li><a href="#">Про нас</a></li>
@@ -852,7 +852,7 @@
 
     <div class="mobile-bottom-nav">
         <div class="container">
-            <a href="{% static 'outletauto/index.html' %}" class="btn-wrapper material">
+            <a href="{% static 'outletauto/index.html" class="btn-wrapper material">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="material-symbols:home-outline-rounded">
                         <path id="Vector"
@@ -916,10 +916,10 @@
             </a>
         </div>
     </div>
-    <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
-    <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
-    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
-    <script src="{% static 'outletauto/assets/js/catalog-pop.js' %}"></script>
+    <script src="js/index.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/dropped.js"></script>
+    <script src="js/catalog-pop.js"></script>
 </body>
 
 </html>

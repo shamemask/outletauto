@@ -1156,10 +1156,10 @@ const UniversalCatalogTirePage = (props) => {
                 </div>
             </div>
         </div>
-        <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
-        <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
-        <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
-        <script src="{% static 'outletauto/assets/js/accordion.js' %}"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/dropped.js"></script>
+        <script src="js/accordion.js"></script>
         <script>
             const droppedList = document.querySelectorAll('.sidebar-list');
             new Accordion(droppedList)

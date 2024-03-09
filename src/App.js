@@ -1,12 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import BasePage from './components/base/base';
 import IndexPage from './components/index';
 // получаю данные props  от API сервера c помощью fetchData post запроса
 import { selectData } from './app/store';
 import { fetchData2 } from './features/index';
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect } from "react";
-
+import Header from './components/base/header';
+import Modal from './components/base/modal';
+import Catalog from './components/catalog';
+import BurgerNav from './components/base/burger_nav';
+import MobileNav from './components/base/mobile_nav';
+import Footer from './components/base/footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,9 +22,19 @@ function App() {
   }, [dispatch]);
   return (
       <BrowserRouter>
+        <div class="wrapper">
+          <div class="offer">
+          <Header />
           <Routes>
-              <Route path="/" element={<BasePage props={props} MainContent={<IndexPage props={props} />} />} />
+              <Route path="/" element={<IndexPage props={props} />}  />
           </Routes>
+          </div>
+        </div>
+        <Modal />
+        <Catalog />
+        <BurgerNav />
+        <MobileNav />
+        <Footer />  
       </BrowserRouter>
   );
 }

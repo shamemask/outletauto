@@ -8,7 +8,7 @@ const FavoritePage = (props) => {
                     <div class="retention" data-retention="favorite-entity">
                         <div class="empty active">
                             <div>
-                                <img src={require('../../assets/imgs/favorite.ico')} alt="bag"/>
+                                <img src="imgs/favorite.ico" alt="bag"/>
                                 </div>
                             <div>
                                 <h2>Товар в избранном отсутствует</h2>
@@ -32,7 +32,7 @@ const FavoritePage = (props) => {
                                     </svg>
                                 </button>
                                 <a href="#" class="card-image">
-                                    <img src={require('../../assets/imgs/image.png')} alt="oil"/>
+                                    <img src="imgs/image.png" alt="oil"/>
                                     </a>
                                 <div class="card-content">
                                     <a href="#">
@@ -72,7 +72,7 @@ const FavoritePage = (props) => {
                                     </svg>
                                 </button>
                                 <a href="#" class="card-image">
-                                    <img src={require('../../assets/imgs/image.png')} alt="oil"/>
+                                    <img src="imgs/image.png" alt="oil"/>
                                     </a>
                                 <div class="card-content">
                                     <a href="#">
@@ -112,7 +112,7 @@ const FavoritePage = (props) => {
                                     </svg>
                                 </button>
                                 <a href="#" class="card-image">
-                                    <img src={require('../../assets/imgs/image.png')} alt="oil"/>
+                                    <img src="imgs/image.png" alt="oil"/>
                                     </a>
                                 <div class="card-content">
                                     <a href="#">
@@ -141,7 +141,7 @@ const FavoritePage = (props) => {
                     </div>
                 </div>
             </div>
-        </div><script src="{% static 'outletauto/assets/js/retention.js' %}"></script></>
+        </div><script src="js/retention.js"></script></>
     )
 }
         

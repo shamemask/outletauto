@@ -16,7 +16,7 @@ const Payment_page = (props) => {
                                 <a href="#" class="circle-btn">
                                     <div class="circle">
                                         <div class="cirle-content">
-                                            <img src={require('../../assets/assets/imgs/icon/card.svg')} alt="present"/>
+                                            <img src="assets/imgs/icon/card.svg" alt="present"/>
                                         </div>
                                     </div>
                                     <span>Банковской картой</span>
@@ -26,7 +26,7 @@ const Payment_page = (props) => {
                                 <a href="#" class="circle-btn">
                                     <div class="circle">
                                         <div class="cirle-content">
-                                            <img src={require('../../assets/imgs/icon/sbp.svg')} alt="present"/>
+                                            <img src="imgs/icon/sbp.svg" alt="present"/>
                                         </div>
                                     </div>
                                     <span>Система Быстрых Платежей (СБП)</span>
@@ -38,7 +38,7 @@ const Payment_page = (props) => {
                                 <a href="#" class="circle-btn">
                                     <div class="circle">
                                         <div class="cirle-content">
-                                            <img src={require('../../assets/imgs/icon/basket.svg')} alt="present"/>
+                                            <img src="imgs/icon/basket.svg" alt="present"/>
                                         </div>
                                     </div>
                                     <span>В магазинах</span>

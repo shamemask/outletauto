@@ -567,7 +567,7 @@ const UniversalCatalogTire3_page = (props) => {
                     </div>
                 </div>
             </div>
-        </div><script src="{% static 'outletauto/assets/js/accordion-list.js' %}"></script>
+        </div><script src="js/accordion-list.js"></script>
         <script>
             const accrodions = new Accordions('accordion', {transition}='0.6s',
                 btn='arrow-btn',

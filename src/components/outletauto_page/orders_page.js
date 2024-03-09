@@ -288,7 +288,7 @@ const OrdersPage = (props) => {
                     </div>
                 </div>
             </div>
-        </div><script src="{% static 'outletauto/assets/js/order.js' %}"></script></>
+        </div><script src="js/order.js"></script></>
     )
 }
 

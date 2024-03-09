@@ -28,7 +28,7 @@ const CatalogPage = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg')} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -83,7 +83,7 @@ const CatalogPage = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg')} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -149,7 +149,7 @@ const CatalogPage = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg')} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">
@@ -378,7 +378,7 @@ const CatalogPage = (props) => {
                                 </div>
                                 <ul class="nav">
                                     <div class="mobile-interface">
-                                        <img src={require('../../assets/imgs/logotype.svg')} class="logotype" alt="logotype"/>
+                                        <img src="imgs/logotype.svg" class="logotype" alt="logotype"/>
                                         <div class="closed-catalog-popup">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                 viewBox="0 0 40 40" fill="none">

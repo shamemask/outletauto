@@ -10,7 +10,7 @@ import MobileNav from './mobile_nav.js';
 
 
 
-const BasePage = (props, MainContent) => {
+const BasePage = ({props, MainContent}) => {
     return (
         <html lang="en">
 
@@ -19,8 +19,8 @@ const BasePage = (props, MainContent) => {
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Главная страница - OutletAuto</title>
-                <link rel="icon" href={require('../../assets/imgs/favicon.ico')} />
-                <link rel="stylesheet" href={require('../../assets/css/style2.css')} />
+                <link rel="icon" href="imgs/favicon.ico" />
+                <link rel="stylesheet" href="css/style2.css" />
                 <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
                 <meta name="google-site-verification" content="nH6uS_83NnR5CMs1X97Ww8U7stcOcu0MUQHIIpIHnIs" />
                 
@@ -33,9 +33,9 @@ const BasePage = (props, MainContent) => {
                 <div class="wrapper">
                     <div class="offer">
                         <Header props={props} />
-                        { MainContent }
+                        <MainContent props={props} />
                     </div>
-                    {!props.user.is_authenticated && (
+                    {!props?.user?.is_authenticated && (
                         // Render React components for registration and authentication modals
                         <>
                             <RegModal props={props} />
@@ -46,18 +46,18 @@ const BasePage = (props, MainContent) => {
                     <Catalog props={props} />
 
                     <BurgerNav props={props} />
-                    {props.user.is_authenticated && <MobileNav props={props} />}
+                    {props?.user?.is_authenticated && <MobileNav props={props} />}
                     <Footer props={props} />
 
                 </div>
             </body>
 
 
-            {/* <script src={require('../../assets/js/dropped.js')}></script>
-            <script src={require('../../assets/js/elem-shiow.js')}></script>
-            <script src={require('../../assets/js/tabs.js')}></script>
-            <script src={require('../../assets/js/registration.js')}></script>
-            <script src={require('../../assets/js/index.js')}></script> */}
+            <script src="js/dropped.js"></script>
+            <script src="js/elem-shiow.js"></script>
+            <script src="js/tabs.js"></script>
+            <script src="js/registration.js"></script>
+            <script src="js/index.js"></script>
         </html>
     );
 };
