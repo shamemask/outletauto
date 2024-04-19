@@ -10,10 +10,9 @@
                     <div class="tab-wrapper">
                         <div class="tab-interface">
                             <div class="nav">
-                                <a href="#" class="tab-btn btn-active" data-tab=1>Масла и технические жидкости</a>
-                                <a href="#" class="tab-btn" data-tab=2>Шины и диски</a>
-                                <a href="#" class="tab-btn" data-tab=3>Автохимия и косметика</a>
-                                <a href="#" class="tab-btn" data-tab=4>Автопринадлежности</a>
+                                {% for eng, ru in all_catalog_names.items %}
+                                    <a href="{% url 'universal_catalog_page' %}?catalog={{eng}}" class="tab-btn btn-active">{{ru}}</a>
+                                {% endfor %}
                             </div>
                             <div class="search">
                                 <form class="content-search search" action="#">
@@ -41,41 +40,20 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <li><a href="#">Масло моторное</a></li>
-                                    <li><a href="#">Масло трансмиссионное</a></li>
-                                    <li><a href="#">Антифриз</a></li>
-                                    <li><a href="#">Тормозная жидкость</a></li>
-                                    <li><a href="#">Жидкость омывателя</a></li>
-                                    <li><a href="#">Гидравлическая жидкость</a></li>
-                                    <li><a href="#">Промывочные жидкости</a></li>
-                                    <li><a href="#">Вода дистиллированная</a></li>
+                                    {% for eng, ru in all_catalog_names.items %}
+                                        <li><a href="{% url 'universal_catalog_page' %}?catalog={{eng}}" >{{ru}}</a></li>
+                                    {% endfor %}
                                 </ul>
                             </div>
+
                             <div class="tab-card-wrapper">
-                                <div class="tab-card card-1">
-                                    <span class="card-title">Масло моторное</span>
-                                </div>
-                                <div class="tab-card card-2">
-                                    <span class="card-title">Масло трансмиссионное</span>
-                                </div>
-                                <div class="tab-card card-3">
-                                    <span class="card-title">Антифриз</span>
-                                </div>
-                                <div class="tab-card card-4">
-                                    <span class="card-title">Тормозная жидкость</span>
-                                </div>
-                                <div class="tab-card card-5">
-                                    <span class="card-title">Жидкость омывателя</span>
-                                </div>
-                                <div class="tab-card card-6">
-                                    <span class="card-title">Гидравлическая жидкость</span>
-                                </div>
-                                <div class="tab-card card-7">
-                                    <span class="card-title">Промывочные жидкости</span>
-                                </div>
-                                <div class="tab-card card-8">
-                                    <span class="card-title">Вода дистиллированная</span>
-                                </div>
+                                {% for eng, ru in all_catalog_names.items %}
+                                <a href="{% url 'universal_catalog_page' %}?catalog={{eng}}" >
+                                    <div class="tab-card card-{{forloop.counter}}">
+                                        <span class="card-title">{{ru}}</span>
+                                    </div>
+                                </a>
+                                {% endfor %}
                             </div>
                         </div>
                         <div class="tab">
