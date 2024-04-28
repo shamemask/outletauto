@@ -28,7 +28,9 @@
                         {{ addauto.comment }}
                         <div class="add-auto-interface">
 <!--                            Отмена - вернуться в гараж -->
-                            <a href="{% url 'garage_page' %}" class="red-btn">Отмена</a>
+                        <div class="btn red-btn">
+                            <a href="{% url 'garage_page' %}">Отмена</a>
+                        </div>
 <!--                            Сохранить - добавить в гараж и вернуться в гараж -->
                             <button class="red-btn" type="submit" disabled>Сохранить</button>
                         </div>

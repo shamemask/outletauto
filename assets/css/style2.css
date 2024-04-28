@@ -1294,6 +1294,9 @@ a {
     height: 40px;
     font-size: 16px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .red-btn {
@@ -2905,3 +2908,9 @@ a.center {
     align-content: center;
     flex-wrap: wrap;
 }
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
