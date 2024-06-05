@@ -29,110 +29,35 @@
                                     <span>Удалить(1)</span>
                                 </div>
                                 <form action="#" class="card-wrapper">
+                                    {% for item in catalog_items %}
                                     <div class="card">
                                         <div class="check-with-label-wrapper">
                                             <input type="checkbox" class="check-with-label select-all" />
                                         </div>
                                         <div class="card-wrapper">
-                                            <img class="card-img" src="{% static 'outletauto/assets/imgs/bmw-my-bmw-app-lp-cp-xxl 3.png' %}"
+                                            <img class="card-img" src="{{ item.image_link }}"
                                                 alt="product">
                                         </div>
                                         <div class="card-info">
-                                            <p class="card-name">MOBIL Mobil Super 3000 X1 5W-40</p>
-                                            <span class="card-type">Масло</span>
+                                            <p class="card-name">{{ item.brand_name }} {{ item.depiction}}</p>
+                                            <span class="card-type">{{ item.catalog }}</span>
                                         </div>
                                         <div class="card-price-info">
-                                            <span class="card-price">3 705 руб</span>
+                                            <span class="card-price">{% if item.price %}{{ item.price }}{% else %}Нет данных{% endif %}</span>
                                             <div class="card-counter">
-                                                <button class="card-plus">+</button>
-                                                <span class="card-num">0</span>
-                                                <button class="card-minus">-</button>
+                                                <button class="card-minus" id="deleteFromBasketBtn" value="{{ item.id }}" data-user="{{ request.session.user_id }}" data-email="{{ request.session.user_email }}" data-catalog="{{ item.id }}" onclick="action_in_basket(this, 'delete_one')">-</button>
+                                                <span class="card-num">{{ item.total_quantity }}</span>
+                                                <button class="card-plus" id="addToBasketBtn" value="{{ item.id }}" data-user="{{ request.session.user_id }}" data-email="{{ request.session.user_email }}" data-catalog="{{ item.id }}" onclick="action_in_basket(this, 'add_to_basket')">+</button>
+
                                             </div>
                                         </div>
                                         <div class="card-destroy">
-                                            <a href="#">
-                                                <img src="{% static 'outletauto/assets/imgs/icon/delete.svg' %}" alt="litter">
-                                            </a>
+                                            <button class="card-minus" id="deleteAllFromBasketBtn" value="{{ item.id }}" data-user="{{ request.session.user_id }}" data-email="{{ request.session.user_email }}" data-catalog="{{ item.id }}" onclick="action_in_basket(this, 'delete_from_basket')">
+                                                    <img src="{% static 'outletauto/assets/imgs/icon/delete.svg' %}" alt="litter">
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label select-all" />
-                                        </div>
-                                        <div class="card-wrapper">
-                                            <img class="card-img" src="{% static 'outletauto/assets/imgs/bmw-my-bmw-app-lp-cp-xxl 3.png' %}"
-                                                alt="product">
-                                        </div>
-                                        <div class="card-info">
-                                            <p class="card-name">MOBIL Mobil Super 3000 X1 5W-40</p>
-                                            <span class="card-type">Масло</span>
-                                        </div>
-                                        <div class="card-price-info">
-                                            <span class="card-price">3 705руб</span>
-                                            <div class="card-counter">
-                                                <button class="card-plus">+</button>
-                                                <span class="card-num">0</span>
-                                                <button class="card-minus">-</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-destroy">
-                                            <a href="#">
-                                                <img src="{% static 'outletauto/assets/imgs/icon/delete.svg' %}" alt="litter">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label select-all" />
-                                        </div>
-                                        <div class="card-wrapper">
-                                            <img class="card-img" src="{% static 'outletauto/assets/imgs/bmw-my-bmw-app-lp-cp-xxl 3.png' %}"
-                                                alt="product">
-                                        </div>
-                                        <div class="card-info">
-                                            <p class="card-name">MOBIL Mobil Super 3000 X1 5W-40</p>
-                                            <span class="card-type">Масло</span>
-                                        </div>
-                                        <div class="card-price-info">
-                                            <span class="card-price">3 705руб</span>
-                                            <div class="card-counter">
-                                                <button class="card-plus">+</button>
-                                                <span class="card-num">0</span>
-                                                <button class="card-minus">-</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-destroy">
-                                            <a href="#">
-                                                <img src="{% static 'outletauto/assets/imgs/icon/delete.svg' %}" alt="litter">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label select-all" />
-                                        </div>
-                                        <div class="card-wrapper">
-                                            <img class="card-img" src="{% static 'outletauto/assets/imgs/bmw-my-bmw-app-lp-cp-xxl 3.png' %}"
-                                                alt="product">
-                                        </div>
-                                        <div class="card-info">
-                                            <p class="card-name">MOBIL Mobil Super 3000 X1 5W-40</p>
-                                            <span class="card-type">Масло</span>
-                                        </div>
-                                        <div class="card-price-info">
-                                            <span class="card-price">3 705руб</span>
-                                            <div class="card-counter">
-                                                <button class="card-plus">+</button>
-                                                <span class="card-num">0</span>
-                                                <button class="card-minus">-</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-destroy">
-                                            <a href="#">
-                                                <img src="{% static 'outletauto/assets/imgs/icon/delete.svg' %}" alt="litter">
-                                            </a>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </form>
                                 <div class="danger">
                                     <img class="danger-icon" src="{% static 'outletauto/assets/imgs/icon/danger.svg' %}" alt="danger"></img>
@@ -165,6 +90,7 @@
                 </div>
             </div>
         </div>
+    <script src="{% static 'outletauto/assets/js/basket_request.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/select-all.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/retention.js' %}"></script>
