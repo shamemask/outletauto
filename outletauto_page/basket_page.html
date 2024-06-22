@@ -20,10 +20,11 @@
                     </div>
                 </div>
                 <div class="not-empty">
+
                     <div class="products-wrapper">
                         <div class="headlines">
                             <div class="check-with-label-wrapper">
-                                <input type="checkbox" class="check-with-label" id="select-all"/>
+                                <input type="checkbox" class="check-with-label" id="select-all" onclick="checkedAll()"/>
                                 <label class="label-for-check" for="select-all">Выбрать все</label>
                             </div>
                             <span>Удалить(1)</span>
@@ -32,7 +33,8 @@
                             {% for item in catalog_items %}
                             <div class="card">
                                 <div class="check-with-label-wrapper">
-                                    <input type="checkbox" class="check-with-label select-all"/>
+                                    <input type="checkbox" class="check-with-label select-all" onchange="checkedOne()"
+                                           value="{{ item.id }}"/>
                                 </div>
                                 <div class="card-wrapper">
                                     <img class="card-img" src="{{ item.image_link }}"
@@ -83,7 +85,11 @@
                     </div>
                     <div class="product-interface">
                         <div class="product-info">
-                            <a href="{% url 'payment_page' %}" class="red-btn center">Перейти к оформлению</a>
+                            <button class="red-btn center"
+                                    data-user="{{ request.session.user_id }}"
+                                    data-email="{{ request.session.user_email }}"
+                                    onclick="createOrder(this)">Создать заказ
+                            </button>
                             <div class="total">
                                 <span class="title-info"><span
                                         class="bold">Всего</span> {{ goods_count_text }} </span>
@@ -92,7 +98,7 @@
                             <!--                            <span class="bonus">+ 3 бонусов за заказ</span>-->
                             <div class="total-price-wrapper">
                                 <span class="title-text bold">Итого</span>
-                                <span class="title-price">{% if total_price %}{{ total_price }}руб{% else %}Цена будет сформирована менеджером и предложена вам после оформления заказа{% endif %}</span>
+                                <span class="title-price">{% if total_price %}{{ total_price }} руб{% else %}Цена будет сформирована менеджером и предложена вам после оформления заказа{% endif %}</span>
                             </div>
                             <input type="text" class="input-silver" placeholder="Промокод">
                             <div class="banner">
@@ -109,5 +115,6 @@
 <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
 <script src="{% static 'outletauto/assets/js/select-all.js' %}"></script>
 <script src="{% static 'outletauto/assets/js/retention.js' %}"></script>
+
 
 {% endblock %}
